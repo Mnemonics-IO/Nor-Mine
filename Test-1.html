@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>freeCodeCamp Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0a23;
+      color: white;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+      background: linear-gradient(to bottom, rgb(99, 33, 69), rgb(23, 35, 89));
+      flex-wrap: wrap;
+    }
+
+    .content {
+      flex: 1;
+      padding-right: 2rem;
+      min-width: 300px;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .content p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 500px;
+    }
+
+    .cta-button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background-color: #ffc107;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #e0a800;
+    }
+
+    .image-container {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* Companies section */
+    .companies {
+      text-align: center;
+      padding: 2rem;
+      background-color: #0a0a23;
+    }
+
+    .companies p {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #ccc;
+    }
+
+    .companies img {
+      height: 35px;
+      margin: 0 15px;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+
+    .companies img:hover {
+      filter: grayscale(0%);
+    }
+
+    /* Responsive layout */
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .content {
+        padding-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero-section">
+    <div class="content">
+      <h1>Build Your Skills<br><span>for Free.</span></h1>
+      <p>
+        Advance your career by learning in-demand skills in Programming,
+        DevOps, Cybersecurity, AI Engineering, and English for Developers.
+      </p>
+      <a href="#" class="cta-button">Get started (it's free)</a>
+    </div>
+    <div class="image-container">
+      <img src="./FCC.rewrite/Images/hero section.jpeg" alt="Team working">
+    </div>
+  </section>
+
+  <section class="companies">
+    <p>More than 100,000 freeCodeCamp graduates work in companies such as</p>
+    <img src="apple.png" alt="Apple">
+    <img src="google.png" alt="Google">
+    <img src="microsoft.png" alt="Microsoft">
+    <img src="spotify.png" alt="Spotify">
+    <img src="amazon.png" alt="Amazon">
+  </section>
+
+</body>
+</html>
