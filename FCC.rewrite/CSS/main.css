@@ -78,7 +78,7 @@ body {
 .hero-section {
     background: radial-gradient(circle at 70% 40%, #2d2f3b 0%, #24314d 100%);
     background: linear-gradient(120deg, #5e2959 0%, #24314d 80%);
-    min-height: 520px;
+    min-height: 100vh;
     padding: 0;
     position: relative;
     display: flex;
