@@ -11,9 +11,11 @@ body {
     line-height: 1.6;
 }
 .companies svg{
-    width: 100px;
-    height: 100px;
-    padding: 1rem
+    width: 100%;
+    height: auto;
+    max-width: 100px; /* Ensures SVGs don't grow too large */
+    display: block; /* Removes extra space below the SVG */
+    padding: 1rem;
 }
 .header {
     background-color: #0a0a23;
@@ -24,6 +26,7 @@ body {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    flex-wrap: wrap;
 }
 .header a {
     color: #FFFFFF;
@@ -34,92 +37,248 @@ body {
 .header .logo {
     font-size: 1.8rem;
     font-weight: 700;
+    margin-right: auto;
 }
 
+.header .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.header .search {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+    display: none; /* Initially hidden on small screens */
+}
+
+.header .search-input {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .header .search {
+        order: 2;
+        width: auto;
+        margin-top: 0;
+        display: block;
+    }
+
+    .header .nav-links {
+        order: 3;
+    }
+
+    .header .logo {
+        order: 1;
+    }
+}
 .header a:hover {
     text-decoration: underline;
 }
-.hero {
-    background: linear-gradient(to right, #4B0082, #00008B);
-    text-align: center;
-    padding: 120px 20px 60px;
+.hero-section {
+    background: radial-gradient(circle at 70% 40%, #2d2f3b 0%, #24314d 100%);
+    background: linear-gradient(120deg, #5e2959 0%, #24314d 80%);
+    min-height: 520px;
+    padding: 0;
     position: relative;
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    align-items: stretch;
     justify-content: center;
-    align-items: center;    background-image: url('../Images/hero section.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
-.hero img {
-    /* The background image is now handled by the .hero class, so this can be removed or repurposed if needed */
-    display: none; /* Hiding the img tag as background is now set via CSS */
+
+.hero-content-wrapper {
+    display: flex;
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 0 0 0;
 }
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
+
+.hero-text-container {
+    flex: 1;
+    min-width: 350px;
+    padding: 32px 32px 0 0;
+    align-self: center;
 }
-.hero h1 {
-    font-size: 4.5em;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-    line-height: 1.1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+.hero-title {
+    font-size: 3.2rem;
+    color: #fff;
+    line-height: 1.12;
+    margin-bottom: 24px;
+    font-weight: bold;
 }
-.hero p {
-    font-size: 2.2em;
-    margin-bottom: 40px;
-    color: #E0E0E0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+.hero-description {
+    font-size: 1.4rem;
+    color: #e6e6e6;
+    margin-bottom: 36px;
+    max-width: 500px;
 }
-.btn {
-    background-color: #F5A623;
-    color: #1A263A;
-    padding: 18px 40px;
+
+.hero-button {
+    background: #ffcb41;
+    color: #22223b;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 18px 38px;
+    border-radius: 4px;
     text-decoration: none;
-    font-weight: 700;
-    border-radius: 8px;
-    font-size: 1.3em;
     display: inline-block;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+
+.hero-image-container {
+    flex: 1;
+    min-width: 380px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
-.btn-outline{
-    color: white;
-    border: white 1px solid;
-    background-color: transparent;
+
+.hero-image {
+    max-width: 480px;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 24px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.19);
 }
-.btn-outline:hover{
-    background-color: white;
-    color: black;
-}
-.companies {
-    padding: 20px;
+
+.companies-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #24314d;
+    color: #fff;
+    padding: 32px 0 24px 0;
     text-align: center;
-    background-color: #1E2A44;
-    font-size: 1em;
-    color: #B0B0B0;
 }
-.companies p {
-    font-size: 2rem;
-    margin-bottom: 15px;
+
+.companies-text {
+    font-size: 1.15rem;
+    margin-bottom: 16px;
 }
-.companies img {
-    height: 35px;
-    margin: 0 15px;
-    filter: grayscale(100%);
-    transition: filter 0.3s;
+
+.companies-highlight {
+    font-weight: bold;
 }
-.companies img:hover {
-    filter: grayscale(0%);
+
+.company-logos {
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.company-logo {
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+.main-footer {
+    background: #2d2f3b;
+    color: #e6e6e6;
+    padding: 40px 0 0 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 17px;
+}
+
+.footer-content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 30px 30px 30px;
+}
+
+.footer-info-section {
+    flex: 1 1 350px;
+    min-width: 350px;
+    max-width: 600px;
+}
+
+.footer-text {
+    margin-bottom: 24px;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.footer-links-section {
+    flex: 2 1 700px;
+    min-width: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-links-column {
+    flex: 1 1 180px;
+    min-width: 180px;
+    margin-bottom: 14px;
+}
+
+.footer-links-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.footer-links-spacer {
+    height: 24px;
+}
+
+.footer-mobile-app-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.footer-mobile-app-title {
+    margin: 30px 0 10px 0;
+    font-weight: 600;
+}
+
+.footer-app-buttons {
+    display: inline-flex;
+    gap: 16px;
+}
+
+.app-button {
+    display: inline-block;
+}
+
+.app-store-img,
+.google-play-img {
+    height: 44px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 2px 8px;
+}
+
+.footer-bottom-links {
+    max-width: 1400px;
+    margin: 36px auto 0 auto;
+    border-top: 1px solid #444454;
+    padding: 16px 30px 0 30px;
+    color: #e6e6e6;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-bottom-link {
+    color: #e6e6e6;
+    text-decoration: none;
 }
 
 .testimonials  {
@@ -211,6 +370,9 @@ article .why-button{
 }
 .why-card svg{
     padding-bottom: 1rem;
+}
+.why-card:hover svg {
+    transform: rotate(10deg);
 }
 .search-input {
     border: black 1px solid;
