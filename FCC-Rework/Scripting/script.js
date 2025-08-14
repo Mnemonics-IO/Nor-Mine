@@ -34,10 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 const tempDiv = document.createElement('div');
                 tempDiv.innerHTML = bodyContent;
 
-                // Correct image paths
+                // Correct image paths using absolute paths
                 tempDiv.querySelectorAll('img').forEach(img => {
-                    if (img.src.includes('../images/')) {
-                        img.src = img.src.replace('../images/', './images/');
+                    let originalSrc = img.getAttribute('src');
+                    if (originalSrc && originalSrc.startsWith('../images/')) {
+                        img.src = originalSrc.replace('../images/', './images/');
+                    } else if (originalSrc && originalSrc.startsWith('./images/')) {
+                        img.src = originalSrc; // Already relative to images folder from index.html
                     }
                 });
 

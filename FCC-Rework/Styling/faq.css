@@ -59,6 +59,7 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.2s;
+  margin-bottom: 40px;
 }
 
 .cta-button:hover {
