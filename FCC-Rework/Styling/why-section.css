@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  background: #2c2c47;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.why-learn-section {
+  background: #2c2c47;
+  color: #fff;
+  min-height: 100vh;
+  padding: 48px 0 0 0;
+  width: 100vw;
+}
+
+.why-learn-title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.why-learn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1050px;
+  margin: 0 auto 0 auto;
+  gap: 46px 58px;
+}
+
+.why-learn-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.why-learn-icon {
+  min-width: 64px;
+  margin-top: 2px;
+  margin-right: 0;
+}
+
+.why-learn-heading {
+  font-size: 1.18rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.why-learn-desc {
+  font-size: 1.1rem;
+  color: #e8e8ee;
+  line-height: 1.45;
+}
+
+.why-learn-btn-row {
+  width: 100%;
+  text-align: center;
+  margin-top: 58px;
+  margin-bottom: 60px;
+}
+
+.why-learn-btn {
+  background: linear-gradient(90deg, #ffd058 0%, #ffb900 100%);
+  color: #23223a;
+  border: none;
+  border-radius: 2px;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 18px 48px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0px rgba(34,34,58,0.13);
+  transition: background 0.2s;
+}
+.why-learn-btn:hover {
+  background: linear-gradient(90deg, #ffb900 0%, #ffd058 100%);
+}
+
+@media (max-width: 900px) {
+  .why-learn-grid {
+    grid-template-columns: 1fr;
+    gap: 38px 0;
+    max-width: 98vw;
+  }
+  .why-learn-section {
+    padding: 24px 0 0 0;
+  }
+  .why-learn-title {
+    font-size: 2rem;
+  }
+  .why-learn-btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+}

@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #23223a;
+}
+
+.topbar {
+  width: 100vw;
+  height: 36px;
+  background: #12123a;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  color: #fff;
+  font-size: 1.18rem;
+  position: relative;
+}
+
+.search-bar {
+  margin-right: 18px;
+  border: none;
+  padding: 5px 8px;
+  background: #444759;
+  color: #fff;
+  font-size: 1rem;
+  width: 340px;
+  border-radius: 2px;
+}
+
+.fcc-logo {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin-right: auto;
+}
+
+.fcc-flame {
+  font-size: 1.12em;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topbar-globe {
+  font-size: 1.1em;
+  margin-right: 5px;
+}
+
+.topbar-menu {
+  background: #23223a;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 2px 12px;
+  margin-right: 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.topbar-signin {
+  background: #ffb900;
+  color: #23223a;
+  border: none;
+  padding: 2px 16px;
+  border-radius: 2px;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero-bg {
+  width: 100vw;
+  min-height: 720px;
+  background: linear-gradient(135deg, #b03a5a 0%, #23223a 60%, #0053a6 100%);
+  padding-bottom: 60px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.hero-left {
+  flex: 1.1;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.07;
+  margin-bottom: 20px;
+}
+
+.hero-desc {
+  font-size: 1.35rem;
+  color: #fff;
+  margin-bottom: 38px;
+  line-height: 1.4;
+}
+
+.hero-cta {
+  background: #ffb900;
+  color: #23223a;
+  border: none;
+  border-radius: 2px;
+  padding: 16px 38px;
+  font-size: 1.38rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px 0px rgba(34,34,58,0.13);
+  transition: background 0.2s;
+}
+.hero-cta:hover {
+  background: #e0a800;
+}
+
+.hero-right {
+  flex: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 430px;
+  padding-right: 36px;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 540px;
+  border-radius: 2px;
+  box-shadow: 0 4px 24px 0 rgba(34,34,58,0.13);
+  object-fit: cover;
+}
+
+/* COMPANY LOGOS */
+.hero-companies {
+  margin: 58px auto 0 auto;
+  max-width: 900px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.22rem;
+}
+
+.hero-companies strong {
+  font-weight: 600;
+}
+
+.company-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  margin-top: 24px;
+}
+
+.company-logo {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  min-width: 80px;
+  justify-content: center;
+  opacity: 0.95;
+}
+
+.company-logo.apple svg,
+.company-logo.google svg,
+.company-logo.microsoft svg,
+.company-logo.spotify svg {
+  height: 32px;
+  width: 32px;
+  margin-right: 8px;
+}
+
+.company-logo.amazon svg {
+  height: 32px;
+  width: 80px;
+  margin-right: 0;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .hero-left, .hero-right {
+    padding: 0;
+    min-width: unset;
+    max-width: 100vw;
+    text-align: center;
+  }
+  .hero-img {
+    margin-top: 30px;
+  }
+  .hero-title {
+    font-size: 2.3rem;
+  }
+}
