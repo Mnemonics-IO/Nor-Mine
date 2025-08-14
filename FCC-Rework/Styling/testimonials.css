@@ -107,7 +107,7 @@ body {
     max-width: 98vw;
   }
   .testimonial-img-col, .testimonial-img {
-    width: 100vw;
+    width: 100%;
     min-width: unset;
     height: 180px;
   }
@@ -118,5 +118,33 @@ body {
   .testimonial-btn {
     font-size: 1.08rem;
     padding: 12px 28px;
+  }
+
+  .testimonial-name,
+  .testimonial-title {
+    text-align: center;
+  }
+
+  .testimonial-desc {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-name {
+    font-size: 1.1rem;
+  }
+
+  .testimonial-title {
+    font-size: 1rem;
+  }
+
+  .testimonial-desc {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }

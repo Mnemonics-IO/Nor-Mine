@@ -21,14 +21,13 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   gap: 28px;
-  padding-top: 12px;
-  padding-bottom: 8px;
+  padding: 20px; /* Adjusted padding */
 }
 
 .footer-left {
   flex: 1.5;
   max-width: 520px;
-  padding-left: 12px;
+  padding-left: 0; /* Removed padding-left */
 }
 
 .footer-left a {
@@ -47,15 +46,15 @@ body {
 .footer-guides-title {
   font-weight: bold;
   text-align: center;
-  margin-bottom: 8px;
-  font-size: 1.15rem;
+  margin-bottom: 15px; /* Adjusted margin */
+  font-size: 1.2rem; /* Slightly increased font size */
 }
 
 .footer-guides-columns {
   display: flex;
   flex-direction: row;
-  gap: 46px;
-  margin-bottom: 14px;
+  gap: 40px; /* Adjusted gap */
+  margin-bottom: 20px; /* Adjusted margin */
 }
 
 .footer-guides-columns ul {
@@ -66,34 +65,35 @@ body {
 }
 
 .footer-guides-columns li {
-  margin-bottom: 8px;
-  font-size: 1rem;
+  margin-bottom: 10px; /* Adjusted margin */
+  font-size: 0.95rem; /* Slightly reduced font size */
 }
 
 .footer-mobile-title {
   font-weight: bold;
   text-align: center;
-  margin-top: 16px;
-  margin-bottom: 8px;
+  margin-top: 20px; /* Adjusted margin */
+  margin-bottom: 10px; /* Adjusted margin */
+  font-size: 1.1rem; /* Slightly reduced font size */
 }
 
 .footer-mobile-apps {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 24px;
-  margin-bottom: 18px;
+  gap: 20px; /* Adjusted gap */
+  margin-bottom: 25px; /* Adjusted margin */
 }
 
 .footer-app-icon {
-  height: 44px;
+  height: 60px;
   width: auto;
 }
 
 .footer-links {
   border-top: 1px solid #444459;
-  margin-top: 16px;
-  padding: 12px 0;
+  margin-top: 20px; /* Adjusted margin */
+  padding: 15px 0; /* Adjusted padding */
 }
 
 .footer-links ul {
@@ -101,14 +101,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 32px;
+  gap: 25px; /* Adjusted gap */
   padding: 0;
   margin: 0;
 }
 
 .footer-links li {
   color: #e0e1eb;
-  font-size: 0.98rem;
+  font-size: 0.9rem; /* Slightly reduced font size */
 }
 
 @media (max-width: 900px) {
@@ -133,5 +133,32 @@ body {
     flex-wrap: wrap;
     gap: 16px;
     font-size: 0.96rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    padding: 0 15px;
+  }
+
+  .footer-left p {
+    font-size: 0.9rem;
+  }
+
+  .footer-guides-title,
+  .footer-mobile-title {
+    font-size: 1rem;
+  }
+
+  .footer-guides-columns li {
+    font-size: 0.85rem;
+  }
+
+  .footer-app-icon {
+    height: 50px;
+  }
+
+  .footer-links li {
+    font-size: 0.8rem;
   }
 }

@@ -38,6 +38,16 @@
   line-height: 1.7;
 }
 
+@media (max-width: 600px) {
+  .faq-list dt {
+    font-size: 0.9rem;
+  }
+
+  .faq-list dd {
+    font-size: 0.85rem;
+  }
+}
+
 .faq-list dt:first-child {
   margin-top: 0;
 }
@@ -85,5 +95,13 @@
     width: 100%;
     padding: 12px;
     font-size: 1rem;
+  }
+
+  .faq-list dt {
+    font-size: 0.9rem;
+  }
+
+  .faq-list dd {
+    font-size: 0.85rem;
   }
 }
