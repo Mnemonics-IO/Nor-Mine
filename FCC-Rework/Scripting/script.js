@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 const bodyContent = doc.body.innerHTML;
                 const tempDiv = document.createElement('div');
                 tempDiv.innerHTML = bodyContent;
+
+                // Correct image paths
+                tempDiv.querySelectorAll('img').forEach(img => {
+                    if (img.src.includes('../images/')) {
+                        img.src = img.src.replace('../images/', './images/');
+                    }
+                });
+
                 tempDiv.querySelectorAll('script').forEach(script => script.remove());
                 document.getElementById(component.id).innerHTML = tempDiv.innerHTML;
             })
