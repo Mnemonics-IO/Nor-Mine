@@ -6,26 +6,26 @@ body {
 
 .topbar {
   width: 100vw;
-  height: 48px; /* Increased height for better spacing */
+  height: 48px; 
   background: #12123a;
   display: flex;
   align-items: center;
-  padding: 0 20px; /* Increased horizontal padding */
+  padding: 0 20px; 
   color: #fff;
   font-size: 1.18rem;
   position: relative;
-  box-sizing: border-box; /* Ensure padding is included in width */
+  box-sizing: border-box; 
 }
 
 .search-bar {
-  margin-right: 25px; /* Adjusted margin */
+  margin-right: 25px; 
   border: none;
-  padding: 8px 12px; /* Increased padding */
+  padding: 8px 12px; 
   background: #444759;
   color: #fff;
-  font-size: 0.95rem; /* Slightly reduced font size */
-  width: 380px; /* Increased width */
-  border-radius: 4px; /* Slightly increased border-radius */
+  font-size: 0.95rem; 
+  width: 380px; 
+  border-radius: 4px; 
 }
 
 .fcc-logo {
@@ -43,11 +43,11 @@ body {
 .topbar-right {
   display: flex;
   align-items: center;
-  gap: 15px; /* Increased gap between elements */
+  gap: 15px;
 }
 
 .topbar-globe {
-  font-size: 1.2em; /* Slightly increased font size */
+  font-size: 1.2em; 
   margin-right: 0;
 }
 
@@ -55,12 +55,12 @@ body {
   background: #23223a;
   color: #fff;
   border: 1px solid #fff;
-  padding: 6px 16px; /* Increased padding */
-  margin-right: 0; /* Removed margin */
-  border-radius: 4px; /* Slightly increased border-radius */
+  padding: 6px 16px; 
+  margin-right: 0; 
+  border-radius: 4px; 
   cursor: pointer;
-  font-size: 0.95em; /* Slightly reduced font size */
-  transition: background 0.2s, border-color 0.2s; /* Added transition */
+  font-size: 0.95em; 
+  transition: background 0.2s, border-color 0.2s;
 }
 .topbar-menu:hover {
   background: #3a3a5a;
@@ -71,18 +71,18 @@ body {
   background: #ffb900;
   color: #23223a;
   border: none;
-  padding: 6px 18px; /* Increased padding */
-  border-radius: 4px; /* Slightly increased border-radius */
-  font-size: 0.95em; /* Slightly reduced font size */
+  padding: 6px 18px; 
+  border-radius: 4px; 
+  font-size: 0.95em; 
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.2s; /* Added transition */
+  transition: background 0.2s; 
 }
 .topbar-signin:hover {
   background: #e0a800;
 }
 
-/* HERO SECTION */
+
 .hero-bg {
   width: 100vw;
   min-height: 720px;
@@ -157,7 +157,7 @@ body {
   object-fit: cover;
 }
 
-/* COMPANY LOGOS */
+
 .hero-companies {
   margin: 58px auto 0 auto;
   max-width: 900px;
@@ -376,4 +376,3 @@ body {
   .hero-title {
     font-size: 2.3rem;
   }
-}

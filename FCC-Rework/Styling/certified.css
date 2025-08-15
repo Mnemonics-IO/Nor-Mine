@@ -4,6 +4,7 @@ body {
   background: #23223a;
 }
 
+
 .curriculum-panel {
   background: #23223a;
   color: #fff;
@@ -18,7 +19,7 @@ body {
   font-weight: bold;
   margin: 32px auto 18px auto;
   max-width: 700px;
-  padding: 0 24px; /* Add padding to match panel-row */
+  padding: 0 24px; 
   box-sizing: border-box;
 }
 

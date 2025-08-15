@@ -23,24 +23,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 links.forEach(link => {
                     const newLink = document.createElement('link');
                     newLink.rel = 'stylesheet';
-                    // Adjust the path to be relative to index.html
-                    // Assuming all CSS files are in the 'Styling' directory
+
+
                     const cssFileName = link.href.substring(link.href.lastIndexOf('/') + 1);
                     newLink.href = `./Styling/${cssFileName}`;
                     document.head.appendChild(newLink);
                 });
-                // Extract body content, excluding script tags
+                
                 const bodyContent = doc.body.innerHTML;
                 const tempDiv = document.createElement('div');
                 tempDiv.innerHTML = bodyContent;
 
-                // Correct image paths using absolute paths
+                
                 tempDiv.querySelectorAll('img').forEach(img => {
                     let originalSrc = img.getAttribute('src');
                     if (originalSrc && originalSrc.startsWith('../images/')) {
                         img.src = originalSrc.replace('../images/', './images/');
                     } else if (originalSrc && originalSrc.startsWith('./images/')) {
-                        img.src = originalSrc; // Already relative to images folder from index.html
+                        img.src = originalSrc;
                     }
                 });
 
